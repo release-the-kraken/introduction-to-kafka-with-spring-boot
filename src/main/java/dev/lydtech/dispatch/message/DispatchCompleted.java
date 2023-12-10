@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DispatchPreparing {
+public class DispatchCompleted {
     UUID orderId;
+    String dispatchedDate;
+
 }

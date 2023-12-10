@@ -1,13 +1,14 @@
 package dev.lydtech.dispatch.util;
 
-import dev.lydtech.dispatch.message.OrderCreated;
-
 import java.util.UUID;
 
+import dev.lydtech.dispatch.message.OrderCreated;
+
 public class TestEventData {
-    public static OrderCreated createOrderCreatedEvent(String item){
+
+    public static OrderCreated buildOrderCreatedEvent(UUID orderId, String item) {
         return OrderCreated.builder()
-                .orderId(UUID.randomUUID())
+                .orderId(orderId)
                 .item(item)
                 .build();
     }
